@@ -41,7 +41,7 @@ public class Vigikawaii {
         for(int i = 0; i<textoClaro.length(); i++){
             char charTextoClaro = textoClaro.charAt(i);
             char charClaveCompleta = clavecompleta.charAt(i);
-            System.out.print(charClaveCompleta);
+
          
             if(charTextoClaro != ' '){
                 textoCifrado += cifradovigi.getTextoCifrado(charTextoClaro, charClaveCompleta);
@@ -55,7 +55,7 @@ public class Vigikawaii {
     }
     
     
-    public String desencriptarTextoClaro(String textoCifrado, String clave){
+    public String desencriptarTextoCifrado(String textoCifrado, String clave){
         String clavecompleta = "";
         int indice = 0;
         for(int i = indice; i<textoCifrado.length(); i++){
@@ -74,7 +74,6 @@ public class Vigikawaii {
         for(int i = 0; i<textoCifrado.length(); i++){
             char charTextoCifrado = textoCifrado.charAt(i);
             char charClaveCompleta = clavecompleta.charAt(i);
-            
             if(charTextoCifrado != ' '){
                 textoClaro += descivigi.getTextoDescifrado(charTextoCifrado, charClaveCompleta);
 

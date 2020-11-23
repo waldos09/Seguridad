@@ -134,7 +134,9 @@ public class Ventana extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Para desencriptar el mesaje la clave debe ser menor que el mismo mensaje UwU");
             
         }else{
-            txt_msj.setText(vigi.desencriptarTextoClaro(txt_msj.getText(), txt_key.getText()));
+
+            txt_msj.setText(vigi.desencriptarTextoCifrado(txt_msj.getText(), txt_key.getText().toUpperCase()));
+ 
         
         }
         }
