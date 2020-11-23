@@ -22,29 +22,30 @@ public class DecifrarVigenere {
         //int indiceX = 0;
         //int indiceY = 0;
         
-        int indiceCharTextoCifrado = 0;
-        int indiceCharTextoClave = 0;
+        int indiceX = 0;
+        int indiceY = 0;
         
         for(int i = 0; i < tablaCesar.length; i++){
             if(TextoCifrado == tablaCesar[i]){
-                indiceCharTextoCifrado = i;
-                System.out.println(indiceCharTextoCifrado);
+                indiceX = i;
                 break;
+                
             }
         }
         
         for(int j = 0; j<tablaCesar.length; j++){
-            if(TextoCifrado == tablaCesar[j]){
-                indiceCharTextoClave = j;
+            if(TextoClave == tablaCesar[j]){
+                indiceY = j;
                 break;
+                
             }
         }
         
         
-        if(indiceCharTextoCifrado >= indiceCharTextoClave){
-            return tablaCesar[(indiceCharTextoCifrado - indiceCharTextoClave)%27];
+        if(indiceX >= indiceY){
+            return tablaCesar[(indiceX - indiceY)%27];
         }else{
-            return tablaCesar[27-(indiceCharTextoClave - indiceCharTextoCifrado)];
+            return tablaCesar[27-(indiceY - indiceX)];
         }
     }
 }

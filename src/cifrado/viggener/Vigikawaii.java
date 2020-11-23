@@ -28,7 +28,7 @@ public class Vigikawaii {
             for(int j = 0; j<clave.length(); j++){
                 if(clavecompleta.length() < textoClaro.length()){
                     if(textoClaro.charAt(i) != ' '){
-                        clavecompleta += clave.charAt(j) + " ";
+                        clavecompleta += clave.charAt(j) + "";
                     }else{
                         clavecompleta += "";
                         j--;
@@ -61,8 +61,8 @@ public class Vigikawaii {
         for(int i = indice; i<textoCifrado.length(); i++){
             for(int j = 0; j<clave.length(); j++){
                 if(clavecompleta.length() < textoCifrado.length()){
-                    if(textoCifrado.charAt(indice) != ' '){
-                        clavecompleta += clave.charAt(j) + " ";
+                    if(textoCifrado.charAt(i) != ' '){
+                        clavecompleta += clave.charAt(j) + "";
                     }else{
                         clavecompleta += "";
                         j--;
@@ -71,7 +71,6 @@ public class Vigikawaii {
                 }
             }
         }
-        
         for(int i = 0; i<textoCifrado.length(); i++){
             char charTextoCifrado = textoCifrado.charAt(i);
             char charClaveCompleta = clavecompleta.charAt(i);
